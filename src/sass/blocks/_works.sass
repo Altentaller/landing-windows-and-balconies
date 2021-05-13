@@ -5,12 +5,22 @@
     &__item
         border: 1px solid #cccccc
         border-radius: 5px
+        overflow: hidden
+        display: none
+        &:hover
+            box-shadow: 2px 2px 8px 0px rgba(34, 60, 80, 0.2)
         &-img     
-            min-height: 200px
-            //border-bottom: 1px solid red
+            height: 200px               
+            transition: all .5s ease 0s
+            &:hover
+                scale: 1.05
             img
-                height: 200px
+                height: 100%  
+                width: 100%               
         p
             text-align: center
             display: block
-            margin: 20px 0
+            margin: 20px 0   
+        a
+            color: $main-color   
+            text-decoration: none
