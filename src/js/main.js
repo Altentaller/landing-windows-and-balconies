@@ -1,4 +1,4 @@
-$(function () {
+$(function () { /* show more works */
   $(".works__item").slice(0, 3).show();
   $("body").on('click', '.load-more', function (e) {
     e.preventDefault();
@@ -10,4 +10,20 @@ $(function () {
       scrollTop: $(this).offset().bottom
     },);
   });
+});
+
+$(function() { /*scroll to top */
+  $('.scrollup').click(function() {
+    $("html, body").animate({
+      scrollTop:0
+    },1000);
+  })
+})
+$(window).scroll(function() {
+  if ($(this).scrollTop()>400) {
+    $('.scrollup').fadeIn();
+  }
+  else {
+    $('.scrollup').fadeOut();
+  }
 });
