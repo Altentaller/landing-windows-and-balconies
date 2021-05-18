@@ -52,21 +52,23 @@
                 </div>
               
                 <div class="col-md-4 offset-md-2 col-sm-6  gx-5 mx-5 header__order">
-                  <div clas="">
                       <div class="title title-red">Заявка на замер</div>
-                      <div class="title">Вызов на замер бесплатный!</div>
-                      <form>
+                      <div class="title">Вызов на замер бесплатный!</div>                      
+                      <form id="order-header">
                             <div class="mb-3 mt-3">
-                              <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                              <input class="form-control" name="tel" required placeholder="+7 (000) 000-00-00">
                             </div>
                             <div class="mb-3">
-                              <input type="text" class="form-control" id="item" placeholder="Замер окна или балкона?">
+                              <input type="text" class="form-control" name="name" required placeholder="Замер окна или балкона?">
                             </div>
 
                           <p>Нажимая на кнопку, вы даете согласие на обработку своих персональных данных и соглашаетесь с политикой конфиденциальности </p>
+                          <div class="col-md-12 form-thanks" >
+                            Заявка отправлена!<br>Вам перезвонит наш менеджер
+                          </div>
                           <button class="btn btn-primary" type="submit">Оставить заявку</button>
-                      </form>
-                  </div>
+                          
+                        </form>
               </div>
                 
             </div>
@@ -300,18 +302,24 @@
           </div>
         </div>
         <div class="row">
-          <form class="row col-md-12 mt-3 d-flex justify-content-center">
+          <form id="order-cta"  class="row col-md-12 mt-3 d-flex justify-content-center">
             <div class="col-md-3 col-sm-12 mt-2">
-              <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+              <input type="text" class="form-control" name="name" required placeholder="Ваше имя">
             </div>
             <div class="col-md-3 col-sm-12 mt-2">
-              <input type="text" class="form-control" id="tel" placeholder="Телефон">
+              <input class="form-control" name="tel"  required placeholder="+7 (000) 000-00-00">
             </div>
             <div class="col-md-2 col-sm-12 mt-2">
               <button type="submit" class="btn btn-outline-secondary btn-outline-secondary-red mb-3">Отправить</button>
             </div>
+            <div class="row col-md-12 d-flex justify-content-center ">
+              <div class="form-thanks" >
+                Заявка отправлена!<br>Вам перезвонит наш менеджер
+              </div>
+            </div>
           </form>
         </div>
+          
       </div>
     </section>
 
@@ -391,6 +399,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" />
+    
+    <!-- jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
     <script src="js/main.js"></script>
 
