@@ -51,3 +51,27 @@ $(document).ready(function () {
       return false;
   });
 });
+
+
+/* scroll to blocks */
+$(function(){
+  $("a[href^='#']").click(function(){
+          var _href = $(this).attr("href");
+          $("html, body").animate({scrollTop: $(_href).offset().top-50});
+          return false;
+  });
+});
+
+/* show mob nav */
+const navMob = document.querySelector('.navbarMobile')
+$(".navbar-toggler").click(function(e) {
+  e.preventDefault();
+  navMob.classList.add('navbarMobile-active');
+})
+$(document).mouseup(function (e) { /* hide mobNav if clicked on page */
+  var div = $(".navbarMobile"); 
+  if (!div.is(e.target)
+      && div.has(e.target).length === 0) {
+      div.removeClass("navbarMobile-active")
+  }
+});

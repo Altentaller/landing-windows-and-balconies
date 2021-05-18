@@ -24,14 +24,14 @@
 
 .bg-light
     background-color: #fff!important
+
 .navbar	
 	box-shadow: 2px 2px 2px rgba(0,0,0,0.3)	
 	.navbar-brand
 		img
-			width: 300px
-			padding: 0 30px
+			width: 300px		
 	.navbar-nav
-		margin: 0 auto		
+		margin: 0 auto
 		li:last-child
 			border: 1px solid $main-color
 			border-radius: 7px
@@ -40,6 +40,30 @@
 		.nav-link
 			padding: 4px 8px
 			color: #000
+			&:focus, .active
+				border-bottom: 1px solid rgba(195, 87, 93, 0.3)
+	.navbarMobile
+		width: 100%
+		text-align: center
+		padding: 20px 0
+		display: none
+		&-active
+			display: block
+		&__box
+			list-style-type: none
+		li
+			border-bottom: 1px solid rgba(204, 204, 204, 0.4)			
+			padding: 5px 0
+			&:last-child a
+				color: $main-color
+				font-weight: 600
+		a
+			font-size: 18px
+			text-decoration: none
+			color: #000
+			&:hover
+				color: rgba(0, 0, 0, 0.8)
+			
 		
 .btn-primary
 	background-color: $main-color
@@ -97,3 +121,13 @@
 	text-align: center
 	&:hover 
   		background-color: $accent-color
+
+
+@media (min-width: 701px) and (max-width: 990px) 
+	.navbar-brand
+		img
+			width: 250px!important
+@media (max-width: 700px) 
+	.navbar-brand
+		img
+			width: 200px!important
