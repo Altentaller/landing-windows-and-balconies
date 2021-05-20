@@ -75,3 +75,17 @@ $(document).mouseup(function (e) { /* hide mobNav if clicked on page */
       div.removeClass("navbarMobile-active")
   }
 });
+
+
+/* modals */
+$('.modal__close').on('click', function(){
+  $('.overlay, #modal-price, .form-thanks').fadeOut('slow');
+});
+
+$('[data-modal="order-price"]').each(function(i){  
+  $(this).on('click', function(){
+    $('#modal-price .modal__desc').text($('.price__item-header').eq(i).text());
+    $('.overlay, #modal-price').fadeIn('slow');
+  })
+});
+
